@@ -1,6 +1,8 @@
 // get canvas and 2d context
-const canvas = document.querySelector("#weatherCanvas");
+const canvas = document.querySelector("#weather-canvas");
 const ctx = canvas.getContext("2d");
+const canvasW = canvas.width;
+const canvasH = canvas.height;
 
 // assist functions
 function drawRect(left, top, width, height, fillColor) {
@@ -18,7 +20,9 @@ function drawArc(x, y, radius, startAngle, endAngle, anticlockwise, fillColor) {
 
 // different kinds of sky
 const skyBlue = "rgb(89, 171, 224)",
-      grey = "rgb(173, 175, 172)";
+      grey = "rgb(97, 97, 97)",
+      black = "rgb(0, 0, 0)",
+      white = "rgb(255, 255, 255)";
 
 const drawBlueSky = function(left, top, width, height) {
 	return drawRect(left, top, width, height, skyBlue);
@@ -26,6 +30,14 @@ const drawBlueSky = function(left, top, width, height) {
 
 const drawGreySky = function(left, top, width, height) {
 	return drawRect(left, top, width, height, grey);
+}
+
+const drawBlackSky = function(left, top, width, height) {
+	return drawRect(left, top, width, height, black);
+}
+
+const drawWhiteSky = function(left, top, width, height) {
+	return drawRect(left, top, width, height, white);
 }
 
 // 

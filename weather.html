@@ -3,13 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>WeatherJS</title>
-	<style>
-		
-	</style>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<canvas id="weatherCanvas" width="800" height="600"></canvas>
-	<p><button id="rain">Rain</button> <button id="stop">Stop</button></p>
+	<canvas id="weather-canvas" width="800" height="500"></canvas>
+	<ul class="tab">
+		<li class="active" data-id='0'>雨</li>
+		<li data-id='1'>雪</li>
+		<li data-id='2'>风</li>
+		<li data-id='3'>霜</li>
+		<li data-id='4'>晴</li>
+		<li data-id='5'>阴</li>
+		<li data-id='6'>霾</li>
+		<li data-id='7'>虹</li>
+		<li data-id='8'>闪电</li>
+		<li data-id='9'>其他</li>
+	</ul>
+	<div class="weather-control">
+		<div class="control-content show">
+			<button id="rain">rain</button>
+		</div>
+		<div class="control-content">
+			<button id="snow">snow</button>
+		</div>
+		<div class="control-content">
+			<button>Click me</button>
+		</div>
+		<div class="control-content">
+			<button id="frost">Click me</button>
+		</div>
+		<div class="control-content">
+			<button>Click me</button>
+		</div>
+		<div class="control-content">
+			<button>Click me</button>
+		</div>
+		<div class="control-content">
+			<button>Click me</button>
+		</div>
+		<div class="control-content">
+			<button>Click me</button>
+		</div>
+		<div class="control-content">
+			<button id="flash">flash</button>
+		</div>
+		<div class="control-content">
+			<button>Click me</button>
+		</div>
+	</div>
+
 	<script src="js/util.js"></script>
 	<script src="js/canvasUtil.js"></script>
 	<script src="js/canvas.js"></script>
